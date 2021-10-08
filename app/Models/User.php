@@ -41,3 +41,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 }
+// app/Models/User.php
+
+use Laravel\Sanctum\HasApiTokens;
+
+class User extends Authenticatable
+{
+    use HasApiTokens, HasFactory, Notifiable;
+} 
